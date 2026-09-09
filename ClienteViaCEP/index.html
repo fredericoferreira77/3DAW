@@ -23,6 +23,16 @@
     </p>
 
     <p>
+        Complemento:
+        <input type="text" id="complemento" size="50" readonly>
+    </p>
+
+    <p>
+        Bairro:
+        <input type="text" id="bairro" size="50"readonly>
+    </p>
+
+    <p>
         Localidade:
         <input type="text" id="localidade" size="50" readonly>
     </p>
@@ -33,7 +43,6 @@
     </p>
 
     <p id="mensagem"></p>
-
 
     <script>
 
@@ -74,25 +83,29 @@
 
                     dataType: "json",
 
-                    success: function(dados) {
+                success: function(dados) {
 
-                        if (dados.erro) {
+               if (dados.erro) {
 
-                            $("#mensagem").text("CEP não encontrado.");
+                    $("#mensagem").text("CEP não encontrado.");
 
-                            $("#logradouro").val("");
-                            $("#localidade").val("");
-                            $("#uf").val("");
+                    $("#logradouro").val("");
+                    $("#complemento").val("");
+                    $("#bairro").val("");
+                    $("#localidade").val("");
+                    $("#uf").val("");
 
-                        } else {
+                } else {
 
-                            $("#logradouro").val(dados.logradouro);
-                            $("#localidade").val(dados.localidade);
-                            $("#uf").val(dados.uf);
+                    $("#logradouro").val(dados.logradouro);
+                    $("#complemento").val(dados.complemento);
+                    $("#bairro").val(dados.bairro);
+                    $("#localidade").val(dados.localidade);
+                    $("#uf").val(dados.uf);
 
-                            $("#mensagem").text("");
-                        }
-                    },
+                    $("#mensagem").text("");
+                }
+            },
 
                     error: function() {
 
