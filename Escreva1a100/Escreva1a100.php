@@ -11,10 +11,12 @@
     <?php
         $i = 1;
         
-        while ($1 <= 100) {
-            echo $1 . "<br>";
-            $1++;
+        while ($i <= 100) {
+            echo $i . " ";
+            $i++;
         }
+
+        echo "<br>";
 
         echo "Atividade concluida com sucesso!";
         echo "<br>";
