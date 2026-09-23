@@ -1,0 +1,12 @@
+
+.ping {
+    font-weight: bold;
+}
+
+.pong {
+    font-style: italic;
+}
+
+.ploc {
+    text-decoration: underline;
+}
